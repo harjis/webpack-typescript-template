@@ -1,17 +1,9 @@
-import React, { Suspense } from "react";
+import React from "react";
 
-import { TodoList, TodoStore } from "./features/Todos";
-import { Loading } from "./components/Loading";
-import { TodoStoreProvider } from "./stores/TodoStoreProvider";
+import { Box } from "./components/Box";
 
 function App() {
-  return (
-    <TodoStoreProvider store={new TodoStore()}>
-      <Suspense fallback={<Loading />}>
-        <TodoList />
-      </Suspense>
-    </TodoStoreProvider>
-  );
+  return <Box />;
 }
 
 export default App;

@@ -14,23 +14,18 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.css$/i,
         use: [
           "style-loader",
+          "@teamsupercell/typings-for-css-modules-loader",
           {
             loader: "css-loader",
             options: {
-              importLoaders: 1,
               modules: true,
+              importLoaders: 1,
             },
           },
         ],
-        include: /\.module\.css$/,
-      },
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"],
-        exclude: /\.module\.css$/,
       },
       {
         // Include ts, tsx, js, and jsx files.
